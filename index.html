@@ -7,22 +7,41 @@
 </head>
 
 <body id="body">
-	<div id="weather">
-		Your Weather Template
+	<div class="container" id="my-page">
+		<div class="row">
+			<div class="col-12">
+				<div id="weather">
+					Your Weather Template
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="clock" id="clock">
+					<div id="quote">
+						The Quote
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			</div>
+
+		</div>
+		</form>
+		<h3><strong>
+				TO DO LIST
+			</strong></h3>
+		<div id="todo">
+
+		</div>
+		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+			<input type="text" name="todo">
+
+
+
 	</div>
-
-	<div id="quote">
-		The Quote
-	</div>
-
-	<div id="todo">
-		<form onsubmit=""></form>
-		A Todo List
-	</div>
-
-
-
-
 	<!--JS Libraries-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<!--Initialize App-->

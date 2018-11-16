@@ -1,6 +1,6 @@
 import WeatherService from "./weather-service.js";
 
-var weatherService = new WeatherService()
+let weatherService = new WeatherService()
 
 
 export default class WeatherController {
