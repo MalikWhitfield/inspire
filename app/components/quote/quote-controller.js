@@ -8,7 +8,7 @@ function drawQuote(quote) {
 	template += `<div class="row">
 			<div class="col-12">
 				<div id="quote">
-					<i>${quote.body}</i>
+					<i>"${quote.body}"- ${quote.author}</i>
 				</div>
 			</div>
 		</div>`
