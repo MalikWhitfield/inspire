@@ -1,18 +1,21 @@
 .cardStyle {
   /* background-color: rgba(128, 128, 128, 0.438); */
   background-color: rgba(255, 255, 255, 0.514);
-  width: 300px;
+  width: 250px;
   flex-direction: column;
   text-shadow: 1px 1px 1px 1px grey
 }
 
-.formStyle{
-  width: 300px;
+.formStyle input{
+  width:  248px;
+  background-color: rgba(255, 255, 255, 0.514);
+  padding-bottom: 0
 }
 
 .imageStyle{
-  width: 100%
+background-size: cover
 }
+
 .selected{
   text-decoration: line-through;
   color: rgb(34, 34, 34);
@@ -22,13 +25,25 @@
 .quoteStyle{
   background-color: rgba(255, 255, 255, 0.514);
   color: rgb(0, 0, 255);
-  text-shadow: 1px 1px 1px 1px grey
+  text-shadow: 5px grey;
+  text-align: center
 }
 
 .weatherStyle{
-  background-color: rgba(255, 255, 255, 0.514);
+  /* background-color: rgba(255, 255, 255, 0.514); */
   /* background-color: rgba(255, 255, 255, 0.24); */
   text-shadow: 1px 1px 1px 1px grey;
   width: auto;
-  color: blue
+  color: white
+}
+
+.buttonStyle{
+  background-color: rgba(0, 0, 255, 0.123);
+  color: rgb(0, 0, 0);
+  border-radius: 14%;
+   align-items: flex-end;
+  justify-content: end;
+}
+.hover{
+  cursor: pointer;
 }

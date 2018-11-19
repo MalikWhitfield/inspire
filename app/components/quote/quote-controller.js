@@ -7,9 +7,9 @@ function drawQuote(quote) {
 	let template = ''
 	template += `<div class="row quoteStyle">
 			<div class="col-12 justify-content-center d-flex justify-content-center">
-				<div id="quote" class="justify-content-center">
-					<h2><i>"${quote.body}" 
-					- ${quote.author}</i><h/2>
+				<div id="quote">
+					<h2><i>"${quote.body}" </i><h/2>
+					<h4><i> - ${quote.author}</i><h/4>
 				</div>
 			</div>
 		</div>`

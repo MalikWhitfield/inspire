@@ -12,25 +12,29 @@ function getTodos() {
 function draw(todos) {
 
 	var template = ''
-	template += `
-		<div class="col-4">
-		<div class="card">
-		<div class="card-body cardStyle">
-	<h3 class="card-title"><strong> Our Missions Today. We Got This! </strong></h3>
-		</div>
-		</div>
-		</div>
-	`
+	// template += `
+	// // 	<div class="col-4">
+	// // 	<div class="card">
+	// // 	<div class="card-body cardStyle">
+	// // <h3 class="card-title"><strong> Our Missions Today. We Got This! </strong></h3>
+	// // 	</div>
+	// // 	</div>
+	// // 	</div>
+	// `
 	console.log(todos)
 	todos.forEach(todo => {
-		template += `<div class="card cardStyle">
+		template += `
+		<div class="card cardStyle d-flex">
 		<input type="checkbox" ${todo.completed ? "checked" : ''} id="${todo._id}"onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')">
-			<label class="${todo.completed ? "selected" : ''}"> ${todo.description} </label>
-		<button class="btn" onclick="app.controllers.todoController.removeTodo('${todo._id}')"> Atta Boy </button>
-		</div>
-`
+			<label class="${todo.completed ? "selected" : ''}"> ${todo.description}   <i class="fas fa-thumbs-up hover" onclick="app.controllers.todoController.removeTodo('${todo._id}')"></i></label>
+		
+`		// <button class="buttonStyle w-50 justify-self-center " onclick="app.controllers.todoController.removeTodo('${todo._id}')"> Atta Boy </button>
+		// </div>
 	});
-	//DONT FORGET TO LOOP
+	template += `<form onsubmit="app.controllers.todoController.addTodoFromForm(event)" class="formStyle"> 
+<input type="text" name="todo">
+</form>`
+
 	document.getElementById('todo').innerHTML = template
 }
 
@@ -56,7 +60,7 @@ export default class TodoController {
 		var todo = {
 			description: form.todo.value
 		}
-		//PASSES THE NEW TODO TO YOUR SERVICE  
+		//PASSES THE NEW TODO TO YOUR SERVICE
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
 		//YOU SHOULDN'T NEED TO CHANGE THIS
 		todoService.addTodo(todo, getTodos)
