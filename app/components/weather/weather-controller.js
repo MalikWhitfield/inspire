@@ -2,6 +2,12 @@ import WeatherService from "./weather-service.js";
 
 let weatherService = new WeatherService()
 
+function drawWeather(weather) {
+	console.log('This is the weather today', weather)
+	let template = ''
+	template += ``
+}
+
 
 export default class WeatherController {
 
@@ -13,6 +19,7 @@ export default class WeatherController {
 		weatherService.getWeather(weather => {
 			console.log(weather);
 			//What can you do with this weather object?
+
 		})
 	}
 }
