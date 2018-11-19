@@ -12,15 +12,22 @@ function getTodos() {
 function draw(todos) {
 
 	var template = ''
-	template += `<h3><strong> Our Missions Today. We Got This! </strong> </h3>`
+	template += `
+		<div class="col-4">
+		<div class="card">
+		<div class="card-body cardStyle">
+	<h3 class="card-title"><strong> Our Missions Today. We Got This! </strong></h3>
+		</div>
+		</div>
+		</div>
+	`
 	console.log(todos)
 	todos.forEach(todo => {
-		template += `
-		<div class="todo">
+		template += `<div class="card cardStyle">
 		<input type="checkbox" ${todo.completed ? "checked" : ''} id="${todo._id}"onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')">
-			<label class="${todo.completed ? "strikeThrough" : ''}"> ${todo.description} </label>
-		</div>
+			<label class="${todo.completed ? "selected" : ''}"> ${todo.description} </label>
 		<button onclick="app.controllers.todoController.removeTodo('${todo._id}')"> Atta Boy </button>
+		</div>
 `
 	});
 	//DONT FORGET TO LOOP

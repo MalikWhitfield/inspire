@@ -1,0 +1,25 @@
+.cardStyle {
+  background-color: rgba(128, 128, 128, 0.438);
+  width: 300px;
+  flex-direction: column;
+}
+
+.formStyle{
+  width: 300px;
+}
+
+.selected{
+  text-decoration: line-through;
+  color: rgb(34, 34, 34);
+}
+
+.quoteStyle{
+  background-color: rgba(255, 255, 255, 0.24);
+  color: black;
+  text-shadow: 1px black
+}
+
+.weatherStyle{
+  background-color: rgba(255, 255, 255, 0.24);
+
+}

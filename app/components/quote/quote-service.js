@@ -16,7 +16,7 @@ export default class QuoteService {
 		console.log('looking for some good quotes')
 		quoteApi().then(res => {
 			console.log('Quote Data', res.data)
-			drawQuote(res.data.quote.body)
+			drawQuote(res.data.quote)
 		})
 	}
 }

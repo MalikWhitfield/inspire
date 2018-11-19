@@ -8,29 +8,22 @@
 
 <body id="body">
 	<div class="container" id="my-page">
-		<div class="row">
-			<div class="col-12">
-				<div id="weather">
-					Your Weather Template
-				</div>
+		<div class="row" id="quote">
+			<div class="col-12 justify-content-center">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12" id="quote">
+			<div class="col-12" id="weather">
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="todo">
 			<div class="col-12">
 			</div>
 		</div>
-
-		<div id="todo">
-
-		</div>
-		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-			<input type="text" name="todo">
-
-
+	</div>
+	<form onsubmit="app.controllers.todoController.addTodoFromForm(event)" class="formStyle">
+		<input type="text" name="todo">
+	</form>
 
 	</div>
 	<!--JS Libraries-->
