@@ -1,6 +1,6 @@
 import QuoteService from "./quote-service.js";
 
-let qs = new QuoteService
+let _qS = new QuoteService
 
 function drawQuote(quote) {
 	console.log(quote)
@@ -22,8 +22,8 @@ export default class QuoteController {
 	}
 
 	getQuote(drawQuote) {
-		qs.getQuote(function (quote) {
-			console.log('What is the quote', quote)
+		_qS.getQuote(function drawQuote(quote) {
+			console.log('This is the quote:', quote)
 		})
 	}
 }
