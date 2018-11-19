@@ -10,9 +10,9 @@ function getTodos() {
 }
 
 function draw(todos) {
-	//WHAT IS MY PURPOSE?
-	//BUILD YOUR TODO TEMPLATE HERE
+
 	var template = ''
+	template += `<h3><strong> Our Missions Today. We Got This! </strong> </h3>`
 	console.log(todos)
 	todos.forEach(todo => {
 		template += `
