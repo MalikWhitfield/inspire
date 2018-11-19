@@ -6,7 +6,7 @@ function drawWeather(weather) {
 	console.log('This is the weather today', weather)
 	let template = ''
 	template += `<div class="col-12 d-flex justify-content-end weatherStyle">
-	<h4>${Math.round((weather.main.temp - 273.15) * 1.8) + 32}°F ${weather.weather[0].description}</h4>
+	<h4 class="font-shadow">${Math.round((weather.main.temp - 273.15) * 1.8) + 32}°F ${weather.weather[0].description}</h4>
 	</div>`
 	document.getElementById('weather').innerHTML = template
 }

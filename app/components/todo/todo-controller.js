@@ -9,9 +9,24 @@ function getTodos() {
 	todoService.getTodos(draw)
 }
 
-function draw(todos) {
+function countTodos(todos) {
+	if (todos.length == 0) {
+		document.getElementById('todo-title').innerText = "We have nothing to do today. Let's enjoy it."
+	} else if (todos.length == 1) {
+		document.getElementById('todo-title').innerText = "We only have 1 thing to do today, get 'er done."
+	}
+	else if (todos.length <= 5) {
+		document.getElementById('todo-title').innerText = 'We only have ' + todos.length + ' things to do, easy money.'
+	} else if (todos.length > 5) {
+		document.getElementById('todo-title').innerText = "We have " + todos.length + " things to do, let's get on it."
+	}
+}
 
-	var template = ''
+
+
+function draw(todos) {
+	countTodos(todos);
+	var template = ``
 	// template += `
 	// // 	<div class="col-4">
 	// // 	<div class="card">
@@ -22,12 +37,16 @@ function draw(todos) {
 	// // 	</div>
 	// `
 	console.log(todos)
+
 	todos.forEach(todo => {
 		template += `
 		<div class="card cardStyle d-flex">
-		<input type="checkbox" ${todo.completed ? "checked" : ''} id="${todo._id}"onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')">
-			<label class="${todo.completed ? "selected" : ''}"> ${todo.description}   <i class="fas fa-thumbs-up hover" onclick="app.controllers.todoController.removeTodo('${todo._id}')"></i></label>
-		
+			<div>
+				<input class="todo-checkbox"type="checkbox" ${todo.completed ? "checked" : ''} id="${todo._id}"onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')">
+				<label class="${todo.completed ? "selected" : ''}" >${todo.description}</label>
+			</div>
+			<button class="btn btn-sm"><i class="fas fa-thumbs-up hover" onclick="app.controllers.todoController.removeTodo('${todo._id}')"></i></button>
+		</div>
 `		// <button class="buttonStyle w-50 justify-self-center " onclick="app.controllers.todoController.removeTodo('${todo._id}')"> Atta Boy </button>
 		// </div>
 	});
