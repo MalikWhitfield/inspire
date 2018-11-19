@@ -8,7 +8,7 @@ function drawQuote(quote) {
 	template += `<div class="row">
 			<div class="col-12">
 				<div id="quote">
-					<i></i>
+					<i>${quote.body}</i>
 				</div>
 			</div>
 		</div>`
@@ -22,8 +22,6 @@ export default class QuoteController {
 	}
 
 	getQuote(drawQuote) {
-		_qS.getQuote(function drawQuote(quote) {
-			console.log('This is the quote:', quote)
-		})
+		_qS.getQuote(drawQuote)
 	}
 }
