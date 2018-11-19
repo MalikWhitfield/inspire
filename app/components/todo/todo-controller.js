@@ -26,7 +26,7 @@ function draw(todos) {
 		template += `<div class="card cardStyle">
 		<input type="checkbox" ${todo.completed ? "checked" : ''} id="${todo._id}"onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')">
 			<label class="${todo.completed ? "selected" : ''}"> ${todo.description} </label>
-		<button onclick="app.controllers.todoController.removeTodo('${todo._id}')"> Atta Boy </button>
+		<button class="btn" onclick="app.controllers.todoController.removeTodo('${todo._id}')"> Atta Boy </button>
 		</div>
 `
 	});

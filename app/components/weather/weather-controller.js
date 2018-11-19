@@ -5,8 +5,8 @@ let weatherService = new WeatherService()
 function drawWeather(weather) {
 	console.log('This is the weather today', weather)
 	let template = ''
-	template += `<div class="col-12 d-flex justify-content-end weatherStyle">
-	<h4> Here is Today's Weather: ${Math.round((weather.main.temp - 273.15) * 1.8) + 32}°F - ${weather.weather[0].description}</h4>
+	template += `<div class="col-4 d-flex justify-content-end weatherStyle">
+	<h4>Today's Weather: ${Math.round((weather.main.temp - 273.15) * 1.8) + 32}°F - ${weather.weather[0].description}</h4>
 	</div>`
 	document.getElementById('weather').innerHTML = template
 }
